@@ -17,10 +17,7 @@ class MeuLayoutApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal),
         useMaterial3: true,
       ),
-      home: const TelaDashboard(),
-    );
-  }
-}
+      home: const TelaDashboard(),}
 
 class TelaDashboard extends StatelessWidget {
   const TelaDashboard({super.key});
@@ -37,7 +34,7 @@ class TelaDashboard extends StatelessWidget {
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
         child: Column(
-          crossAxisAlignmento: CrossAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Text(
               'Resumo das Observações',
@@ -47,7 +44,20 @@ class TelaDashboard extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 16),
-
+	const Text(
+ 	 'Últimos Registros',
+ 	 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+	),
+	const SizedBox(height: 8),
+	Row(
+  	mainAxisAlignment: MainAxisAlignment.spaceBetween,
+ 	 children: const [
+    	Chip(label: Text('Flutter')),
+    	Chip(label: Text('Dart')),
+    	Chip(label: Text('Git')),
+  ],
+),
+const SizedBox(height: 16),
             Row(
               children: [
                 Expanded(
